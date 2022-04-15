@@ -1,0 +1,87 @@
+* Aventure en court
+
+#+NAME: aventure
+| Aventure                 | Scène |
+|--------------------------+-------|
+| Le pistolet sur la tempe |     1 |
+
+#+begin_src sqlite :db ac2d20.db :var orgtable=aventure :colnames yes
+drop table if exists aventure;
+create table aventure(Aventure text, Scène tinyint);
+.mode csv aventure
+.import $orgtable aventure
+#+end_src
+
+#+RESULTS:
+
+#+NAME: points
+| Nom    | Valeurs |
+|--------+---------|
+| Menace |      10 |
+| Élan   |       0 |
+#+begin_src sqlite :db ac2d20.db :var orgtable=points :colnames yes
+drop table if exists points;
+create table points(Nom text, Valeur tinyint);
+.mode csv points
+.import $orgtable points
+#+end_src
+
+#+RESULTS:
+
+
+
+* Stress et Blessures
+
+#+NAME: stress
+| Personnage | Stress | Fatigue | StressMax | StressRestant | Blessures | BlessuresMax | BlessuresRestantes | État | Fortune |
+|------------+--------+---------+-----------+---------------+-----------+--------------+--------------------+------+---------|
+| asha       |      0 |       0 |        10 |            10 |         0 |            3 |                  3 |      |       3 |
+| igor       |      0 |       0 |        14 |            14 |         0 |            3 |                  3 |      |       3 |
+| jean       |      0 |       0 |        11 |            11 |         0 |            3 |                  3 |      |       3 |
+| renato     |      0 |       0 |         9 |             9 |         0 |            3 |                  3 |      |       3 |
+| émile      |      0 |       0 |        13 |            13 |         0 |            3 |                  3 |      |       3 |
+#+TBLFM: $5=$4-$3-$2::$8=$7-$6
+
+#+begin_src sqlite :db ac2d20.db :var orgtable=stress :colnames yes
+drop table if exists stress;
+create table stress(Personnage text, Stress tinyint, Fatique tinyint, StressMax tinyint, StressRestant tinyint, Blessure tinyint, BlessuresMax tinyint, BlessuresRestantes tinyint, État text, Fortune tinyint);
+.mode csv stress
+.import $orgtable stress
+#+end_src
+
+#+RESULTS:
+
+
+* Caractéristiques
+
+| Personnage | Agilité | Coordination | Perspicacité | Raison | Vigueur | Volonté |
+|------------+---------+--------------+--------------+--------+---------+---------|
+| asha       | 11 (+2) | 9 (+1)       |            8 |      7 |       8 |       8 |
+|            |         |              |              |        |         |         |
+
+* Compétences
+
+| Personnage | Compétence  |                            valeur |
+|------------+-------------+-----------------------------------|
+| asha       | Athlétisme  |                                 3 |
+| asha       | Ingénieurie |                                 1 |
+| asha       | Combat      |                 2, Armes de mêlée |
+| asha       | Observation |                                 1 |
+| asha       | Persuasion  |                                 1 |
+| asha       | Résilience  |                                 2 |
+| asha       | Discrétion  | 5, Camouflage, Discrétion Urbaine |
+| asha       | Survie      |                                 1 |
+| asha       | Tactiques   |            1, Opérations Secrètes |
+|            |             |                                   |
+
+* Équipement
+
+| Arme      | Nom                 | Focus | portée | Dommage      | Salve | Taille | Qualités |
+|-----------+---------------------+-------+--------+--------------+-------+--------+----------|
+| coutranch | Couteau de tranchée | Mêlée | Proche | 3dd, Vicieux |       | Mineur | Caché    |
+
+
+| Personnage | Arme      | Munitions |
+|------------+-----------+-----------|
+| asha       | coutranch |           |
+
