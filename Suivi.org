@@ -49,19 +49,32 @@ create table stress(Personnage text, Stress tinyint, Fatique tinyint, StressMax 
 .import $orgtable stress
 #+end_src
 
-#+RESULTS:
+#+RESULTS:;
 
 
 * Caractéristiques
-
+  
+#+NAME: caractéristiques
 | Personnage | Agilité | Coordination | Perspicacité | Raison | Vigueur | Volonté |
 |------------+---------+--------------+--------------+--------+---------+---------|
 | asha       | 11 (+2) | 9 (+1)       |            8 |      7 |       8 |       8 |
-|            |         |              |              |        |         |         |
+
+#+begin_src sqlite :db ac2d20.db :var orgtable=caractéristiques :colnames yes
+drop table if exists caractéristiques;
+create table caractéristiques(Personnage text, Agilité tinyint, Coordination tinyint, Perspicacité tinyint, Raison tinyint, Vigueur tinyint, Volonté tinyint);
+.mode csv 
+.import $orgtable caractéristiques
+#+end_src
+
+#+RESULTS:
+
+
+
 
 * Compétences
 
-| Personnage | Compétence  |                            valeur |
+#+NAME: compétences
+| Personnage | Compétence  |                            Valeur |
 |------------+-------------+-----------------------------------|
 | asha       | Athlétisme  |                                 3 |
 | asha       | Ingénieurie |                                 1 |
@@ -73,15 +86,44 @@ create table stress(Personnage text, Stress tinyint, Fatique tinyint, StressMax 
 | asha       | Survie      |                                 1 |
 | asha       | Tactiques   |            1, Opérations Secrètes |
 |            |             |                                   |
+#+begin_src sqlite :db ac2d20.db :var orgtable=compétences :colnames yes
+drop table if exists compétences;
+create table compétences(Personnage text, Compétence VARCHAR(64), Valeur VARCHAR(256));
+.mode csv 
+.import $orgtable compétences
+#+end_src
+
+#+RESULTS:
+
+
 
 * Équipement
 
-| Arme      | Nom                 | Focus | portée | Dommage      | Salve | Taille | Qualités |
+#+NAME: armes
+| Arme      | Nom                 | Focus | Portée | Dommages     | Salve | Taille | Qualités |
 |-----------+---------------------+-------+--------+--------------+-------+--------+----------|
 | coutranch | Couteau de tranchée | Mêlée | Proche | 3dd, Vicieux |       | Mineur | Caché    |
+#+begin_src sqlite :db ac2d20.db :var orgtable=armes :colnames yes
+drop table if exists armes;
+create table armes(Arme VARCHAR(32), Nom VARCHAR(256), Focus VARCHAR(256), Portée VARCHAR(32), Dommages VARCHAR(256), Salve VARCHAR(256), Taille VARCHAR(32), Qualités VARCHAR(256));
+.mode csv 
+.import $orgtable armes
+#+end_src
+
+#+RESULTS:
 
 
+#+NAME: équipement
 | Personnage | Arme      | Munitions |
 |------------+-----------+-----------|
 | asha       | coutranch |           |
+
+#+begin_src sqlite :db ac2d20.db :var orgtable=équipement :colnames yes
+drop table if exists équipement;
+create table équipement(Personnage text, Arme VARCHAR(32), Munitions TINYINT);
+.mode csv 
+.import $orgtable équipement
+#+end_src
+
+#+RESULTS:
 
