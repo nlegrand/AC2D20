@@ -1,9 +1,9 @@
 * Aventure en court
 
 #+NAME: aventure
-| Aventure                 | Scène |
-|--------------------------+-------|
-| Le pistolet sur la tempe |     1 |
+| Aventure                 | Acte | Scène | Fichier                      | Courante |
+|--------------------------+------+-------+------------------------------+----------|
+| Le pistolet sur la tempe |    1 |     1 | le_pistolet_sur_la_tempe.org |        1 |
 
 #+begin_src sqlite :db ac2d20.db :var orgtable=aventure :colnames yes
 drop table if exists aventure;
