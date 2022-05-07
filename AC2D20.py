@@ -96,6 +96,16 @@ async def on_message(message):
 
 {print_skills(perso)}```''')
 
+    show_context = re.match(r"^\s*!context\s*$", message.content)
+    if (show_context is not None):
+        con = sqlite3.connect('ac2d20.db')
+        con.row_factory = sqlite3.Row
+        cur = con.cursor()
+        cur.execute("select Fichier from aventure where Courante = 1")
+        r = cur.fetchone()
+        con.close()
+        await message.channel.send(f"https://github.com/nlegrand/AC2D20/blob/main/{r['Fichier']}")
+
 
 def fetch_points(pointname):
     name = ''

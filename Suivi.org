@@ -7,7 +7,7 @@
 
 #+begin_src sqlite :db ac2d20.db :var orgtable=aventure :colnames yes
 drop table if exists aventure;
-create table aventure(Aventure text, Scène tinyint);
+create table aventure(Aventure text, Acte tinyint, Scène tinyint, Fichier VARCHAR(256), Courante tinyint);
 .mode csv aventure
 .import $orgtable aventure
 #+end_src
