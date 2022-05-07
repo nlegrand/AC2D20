@@ -1,6 +1,6 @@
 #+title: Le pistolet sur la tempe
 
-Début juin 1940, c’est la débacle en France, les Allemands ont atteint
+Début juin 1940, c’est la débâcle en France, les Allemands ont atteint
 la Manche depuis le mois de mai et menacent le Royaume-Uni. Émile prit
 part à la résistance héroïque française pendant la bataille de
 Dunkerque pour permettre aux troupes britanniques et canadiennes
@@ -8,10 +8,10 @@ d’évacuer. Tout son bataillon fut décimé, il partit lui-même dans les
 derniers bateaux. Arrivé au Royaume-Uni, après quelques entretiens, il
 fut affecté à une étrange branche de l’armée, la Section M.
 
-Alexander Towton participa lui-même à l’entertien que passa Émile à la
-section M. Après de nombreux tests et lui avoir expliquer ce dont il
+Alexander Towton participa lui-même à l'entretien que passa Émile à la
+section. Après de nombreux tests et lui avoir expliquer ce dont il
 était question, Towton demanda à Émile s’il voulait rejoindre la
-section. Émile resta un instant silencieux avant de dire : « Je
+section. Émile resta un instant silencieux avant de répondre : « Je
 pourrais avoir un Springfield M1903 ?
 — Qu’est-ce que c’est ?
 — Un fusil américain.
@@ -20,10 +20,11 @@ pourrais avoir un Springfield M1903 ?
 — Oui, bien sûr.
 — Alors je veux bien. »
 
-Une fois partie, Towton dit aux membres de la section présente :
-encore une excellente recrue. Typique de la section M.
+Une fois partie, l’affable lieutenant Archibald Strang dit aux membres
+de la section présente : « un étranger inexpressif et
+inquiétant. Encore une excellente recrue. Typique de la section M. »
 
-* Acte 1 : Les falaises blanches de Douvres
+* Acte 1 : Les falaises blanches
 
 ** Scène 1 : Un télégramme
 
@@ -46,10 +47,12 @@ Cher <votre nom>,
 
 Vous avez ordre de vous rendre immédiatement à Douvre en train, comme
 il est indiqué sur vos billets. Vous serez accueilli à la station par
-le sergent Briggs de la Royal Artillery. Il vous briefera sur une
-situation urgente qui est apparu à cet endroit.  Il est de la plus
-haute importance que la situation soit résolu rapidement et avec le
-plus grand secret et devra être envoyé à la section M, ABS du
-Metropole Hotel.
+le sergent Briggs de la Royal Artillery. Il vous brifera sur des
+circonstances urgentes qui sont apparues à cet endroit.  Il est de la
+plus haute importance que ces dernières soient résolues rapidement et
+avec le plus grand secret. Une fois que c’est fait un rapport écrit
+devra être envoyé à la section M, ABS du Metropole Hotel.
+
+— Strang
 #+END_QUOTE
 
