@@ -1,0 +1,115 @@
+{
+    "nom": "Asha Katherin Thakir Douglas",
+    "nationalité": "Britannique",
+    "archétype": "Agent infiltré",
+    "antécédents": "Agent secret",
+    "caractéristique": "Fougue de la jeunesse",
+    "véritées": [
+        "Origines indiennes",
+        "Tueuse silencieuse",
+        "Fougue de la jeunesse"
+    ],
+    "stress": {
+        "total": 10,
+        "fatigue": 1,
+        "perdus": 4
+    },
+    "languages": "anglais",
+    "courage": 0,
+    "armure": 0,
+    "fortune": 0,
+    "blessures": {
+        "max": 3,
+        "descriptions": [
+            "Le pied coupé, ça saigne",
+            "Le bras cassé, ça fait mal",
+            "Une balle dans la tête, couic"
+        ]
+    },
+    "attributs": {
+        "agilité": 11,
+        "vigueur": 8,
+        "coordination": 9,
+        "perspicacité": 8,
+        "reason": 7,
+        "volonté": 8
+    },
+    "compétences": {
+        "savoir académique": {
+            "score": 0
+        },
+        "athlétisme": {
+            "score": 3
+        },
+        "ingénieurie": {
+            "score": 1
+        },
+        "combat": {
+            "score": 2,
+            "spécialité": [
+                "arme de mêlée"
+            ]
+        },
+        "médecine": {
+            "score": 0
+        },
+        "observation": {
+            "score": 1
+        },
+        "persuasion": {
+            "score": 1
+        },
+        "résilience": {
+            "score": 2
+        },
+        "discrétion": {
+            "score": 5,
+            "spécialité": [
+                "camouflage",
+                "discrétion urbaine"
+            ]
+        },
+        "survie": {
+            "score": 1
+        },
+        "tactique": {
+            "score": 1,
+            "spéialité": [
+                "opérations secrètes"
+            ]
+        },
+        "véhicule": {
+            "score": 0
+        }
+    },
+    "armes": {
+        "couteau de tranchée": {
+            "usage": "mêlée",
+            "portée": "proche",
+            "dommages": {
+                "dé de défi": 3,
+                "effet": "vicieux"
+            },
+            "salve": "NA",
+            "taille": "mineur",
+            "qualité": "caché"
+        }
+    },
+    "talents": {
+        "acrobatie": {
+            "mots clefs": [
+                "agent infiltré",
+                "athlétisme"
+            ],
+            "effet": "2 élans : peut passer un obstacle franchissables sans jeter de dé"
+        },
+        "exploiter les faiblesses": {
+            "mots clefs": "discrétion",
+            "effet": "attaque perçante et +2 dd de dommage sur une cible prise au dépourvue ou ayant une faiblesse"
+        },
+        "pied sûr": {
+            "mots clefs": "athlétisme",
+            "effet": "ignore la première complication liée à un jet d’athlétisme. Les adversaires doivent dépenser trois menaces au lieu de deux pour faire tomber à terre"
+        }
+    }
+}
