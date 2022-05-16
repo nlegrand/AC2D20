@@ -5,7 +5,7 @@ import re
 import random
 import sqlite3
 import json
-from tabulate import tabulate
+from AC2D20 import AC2D20Character
 
 ac2d20 = discord.Client()
 
