@@ -126,12 +126,16 @@ async def on_message(message):
         res += "    le jet de d20, exemple avec 2 dés, une diff de 2,\n"
         res += "    attributs + compétences à 12 et pas de spécialité :\n"
         res += "    2d20 diff:2 seuil:12 spé:0\n"
+        res += "  !(élan|menace) : montre la réserve d’élan ou de menace\n"
+        res += "  !(élan|menace) (+|-)[0-9]: ajoute ou enlève des points de menace ou d’élan\n"
         res += "  !context : lien vers le contexte de l’histoire\n"
         res += "  !perso <perso> : description du perso\n"
         res += "  !perso <perso> caracs : les caracs du perso\n"
         res += "  !perso <perso> santé : l’état de santé du perso\n"
         res += "  !perso <perso> armes : les armes du perso\n"
         res += "  !(stress|fatigue) <perso> [0-9] : positionne le stress ou la fatigue\n"
+        res += "  !blessure <perso> <bla bla bla> : ajoute une blessure\n"
+        res += "  !blessure <perso> <remove> : retire toutes les blessures\n"
         res += "  <perso> peut être une de ces quatre valeurs : "
         res += "asha, émile, jean, renato\n"
 
@@ -149,6 +153,17 @@ async def on_message(message):
         res = f"Stress :\n{print_dict(character.stats('stress'), 2)}"
         res += f"Blessures :\n{print_dict(character.stats('blessures'), 2)}"
         await message.channel.send(f"```#Santé de {perso} :\n\n{res}```")
+
+    set_injury = re.match(r"^\s*!blessure\s+([a-z]+)\s+(.{3,512})$", message.content)
+    if set_injury is not None:
+        perso = set_injury.group(1)
+        argstr = set_injury.group(2)
+        character = AC2D20Character(perso)
+        character.injury(arg=argstr)
+        res = f"Stress :\n{print_dict(character.stats('stress'), 2)}"
+        res += f"Blessures :\n{print_dict(character.stats('blessures'), 2)}"
+        await message.channel.send(f"```#Santé de {perso} :\n\n{res}```")
+
 
 
 def print_character(character_name):

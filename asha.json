@@ -22,11 +22,7 @@
     "fortune": 0,
     "blessures": {
         "max": 3,
-        "descriptions": [
-            "Le pied coupé, ça saigne",
-            "Le bras cassé, ça fait mal",
-            "Une balle dans la tête, couic"
-        ]
+        "descriptions": []
     },
     "attributs": {
         "agilité": 11,

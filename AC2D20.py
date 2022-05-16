@@ -42,7 +42,7 @@ class AC2D20Character:
         cur_injuries = self.allstats['blessures']['descriptions']
         if arg == "remove":
             self.allstats['blessures']['descriptions'] = []
-            self.save
+            self.save()
             return self.stats('blessures')
         elif arg == "status":
             if len(cur_injuries) > max_injuries:
