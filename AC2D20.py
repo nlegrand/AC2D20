@@ -17,10 +17,18 @@ class AC2D20Character:
     def stress(self, what, value):
         if not re.match(r'perdus|fatigue', what):
             return False
-        if value >= 0 or value <= self.allstats['stress']['total']:
+        if value >= 0 and value <= self.allstats['stress']['total']:
             self.allstats['stress'][what] = value
             self.save()
             return self.stats('stress')
+        else:
+            return False
+
+    def fortune(self, value):
+        if value >= 0 and value <= 3:
+            self.allstats['fortune'] = value
+            self.save()
+            return self.stats['fortune']
 
     def save(self):
         f = open(f'{self.id}.json', 'w')
