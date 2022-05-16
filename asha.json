@@ -11,10 +11,12 @@
     ],
     "stress": {
         "max": 10,
-        "fatigue": 1,
-        "perdus": 4
+        "fatigue": 0,
+        "perdus": 0
     },
-    "languages": ["anglais"],
+    "languages": [
+        "anglais"
+    ],
     "courage": 0,
     "armure": 0,
     "fortune": 0,

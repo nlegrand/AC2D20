@@ -131,9 +131,25 @@ async def on_message(message):
         res += "  !perso <perso> caracs : les caracs du perso\n"
         res += "  !perso <perso> santé : l’état de santé du perso\n"
         res += "  !perso <perso> armes : les armes du perso\n"
+        res += "  !(stress|fatigue) <perso> [0-9] : positionne le stress ou la fatigue\n"
         res += "  <perso> peut être une de ces quatre valeurs : "
         res += "asha, émile, jean, renato\n"
+
         await message.channel.send(f"```{res}```")
+
+    set_stress = re.match(r"^\s*!(stress|fatigue)\s*([a-z]+)\s*(1{0,1}[0-9])\s*$", message.content)
+    if set_stress is not None:
+        stress_type = set_stress.group(1)
+        if stress_type == "stress":
+            stress_type = "perdus"
+        perso = set_stress.group(2)
+        value = int(set_stress.group(3))
+        character = AC2D20Character(perso)
+        character.stress(stress_type, value)
+        res = f"Stress :\n{print_dict(character.stats('stress'), 2)}"
+        res += f"Blessures :\n{print_dict(character.stats('blessures'), 2)}"
+        await message.channel.send(f"```#Santé de {perso} :\n\n{res}```")
+
 
 def print_character(character_name):
     character = AC2D20Character(character_name)
