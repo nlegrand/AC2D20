@@ -24,7 +24,7 @@ async def on_message(message):
         await message.channel.send('Prout Prout Prout !')
 
     challenge_dice = re.match(r"^\s*([0-9]+)(🐙)\s*$", message.content)
-    d20 = re.match(r"^\s*([0-5])d20\s+diff:\s*([0-5])\s+seuil:\s*(1{0,1}[0-9])\s+spé:([0-1])\s*$", message.content)
+    d20 = re.match(r"^\s*([0-5])d20\s+diff:\s*([0-5])\s+seuil:\s*(1{0,1}[0-9])\s+spé:\s*([0-1])\s*$", message.content)
     cd_possibilities = [1, 2, 0, 0, "🐙", "🐙"]
 
     if challenge_dice is not None:
@@ -86,17 +86,29 @@ async def on_message(message):
         num = int(op_on_point.group(3))
         await message.channel.send(update_points(pointname, operator, num))
 
-    show_char = re.match(r"^\s*!perso\s*([a-z])+\s*$", message.content)
+    show_char = re.match(r"^\s*!perso\s*([a-z]+)\s*$", message.content)
     if (show_char is not None):
         perso = show_char.group(1)
-        await message.channel.send(f'''```# Caractéristiques
+        await message.channel.send(print_character(perso))
 
-{print_attributes(perso)}```''')
-        await message.channel.send(f'''```#Compétences
-
-{print_skills(perso)}```''')
-
+    show_char_detail = re.match(r"^\s*!perso\s*([a-z]+)\s*(caracs|santé|armes)\s*$", message.content)
+    if (show_char_detail is not None):
+        perso = show_char_detail.group(1)
+        character = AC2D20Character(perso)
+        detail = show_char_detail.group(2)
+        if detail == "caracs":
+            res = print_attributes(character, 2) + "\n"
+            res += print_skills(character, 2)
+            await message.channel.send(f"```#Caracs de {perso} :\n\n{res}```")
+        elif detail == 'santé':
+            res = f"Stress :\n{print_dict(character.stats('stress'), 2)}"
+            res += f"Blessures :\n{print_dict(character.stats('blessures'), 2)}"
+            await message.channel.send(f"```#Santé de {perso} :\n\n{res}```")
+        elif detail == 'armes':
+            res = f"Armes :\n{print_dict(character.stats('armes'), 2)}"
+            await message.channel.send(f"```#Armes de {perso} :\n\n{res}```")
     show_context = re.match(r"^\s*!context\s*$", message.content)
+
     if (show_context is not None):
         con = sqlite3.connect('ac2d20.db')
         con.row_factory = sqlite3.Row
@@ -105,6 +117,103 @@ async def on_message(message):
         r = cur.fetchone()
         con.close()
         await message.channel.send(f"https://github.com/nlegrand/AC2D20/blob/main/{r['Fichier']}")
+
+    show_help = re.match(r"^\s*!aide\s*$", message.content)
+    if (show_help is not None):
+        res = "Commandes de AC2D20 :\n"
+        res += "  [0-9]🐙 : envoie n dés de défi\n"
+        res += "  [0-5]d20 diff:[0-5] seuil:[0-1][0-9] spé:[0-1]\n"
+        res += "    le jet de d20, exemple avec 2 dés, une diff de 2,\n"
+        res += "    attributs + compétences à 12 et pas de spécialité :\n"
+        res += "    2d20 diff:2 seuil:12 spé:0\n"
+        res += "  !context : lien vers le contexte de l’histoire\n"
+        res += "  !perso <perso> : description du perso\n"
+        res += "  !perso <perso> caracs : les caracs du perso\n"
+        res += "  !perso <perso> santé : l’état de santé du perso\n"
+        res += "  !perso <perso> armes : les armes du perso\n"
+        res += "  <perso> peut être une de ces quatre valeurs : "
+        res += "asha, émile, jean, renato\n"
+        await message.channel.send(f"```{res}```")
+
+def print_character(character_name):
+    character = AC2D20Character(character_name)
+    sheet = '```'
+    sheet += f"Nom : {character.stats('nom')}\n"
+    sheet += f"Nationalité : {character.stats('nationalité')}\n"
+    sheet += f"Archétype : {character.stats('archétype')}\n"
+    sheet += f"Antécédents : {character.stats('antécédents')}\n"
+    sheet += f"Caractéristique : {character.stats('caractéristique')}\n"
+    sheet += f"Vérités :\n{print_tab(character.stats('vérités'), 2)}"
+    sheet += f"Langues :\n{print_tab(character.stats('languages'), 2)}"
+    sheet += "\n"
+    sheet += f"Courage : {character.stats('courage')}\n"
+    sheet += f"Armure : {character.stats('armure')}\n"
+    sheet += f"Fortune : {character.stats('fortune')}\n"
+    sheet += "\n"
+    sheet += f"Talents :\n{print_dict(character.stats('talents'), 2)}"
+    sheet += '```'
+    return sheet
+
+
+def print_value(character_name, key):
+    character = AC2D20Character(character_name)
+    res = ''
+    if isinstance(character.stats(key), dict):
+        res = print_dict(character.stats(key), 2)
+    elif isinstance(character.stats(key), list):
+        res = print_tab(character.stat(key), 2)
+    else:
+        res += f"key : {character.stat(key)}\n"
+    return res
+
+
+def print_attributes(character, indent):
+    res = 'Attributs :\n\n'
+    for k, v in character.allstats['attributs'].items():
+        res += f"{' ' * indent}- {k} : {v}"
+        if v == 9:
+            res += " (+1 )"
+        elif v == 10 or v == 11:
+            res += " (+2)"
+        elif v == 12 or v == 13:
+            res += " (+3)"
+        elif v == 14 or v == 15:
+            res += " (+4)"
+        elif v >= 16:
+            res += " (+5)"
+        res += "\n"        
+    return res
+
+
+def print_skills(character, indent):
+    res = 'Compétences :\n\n'
+    for k, v in character.allstats['compétences'].items():
+        res += f"{' ' * indent}- {k} : {v['score']}"
+        if "spécialité" in v:
+            res += f"({', '.join(v['spécialité'])})"
+        res += "\n"
+    return res
+
+def print_tab(tab, indent):
+    res = ''
+    for v in tab:
+        if isinstance(v, dict):
+            res = print_dict(v, indent + 2)
+        else:
+            res += f"{' ' * indent}- {v}\n"
+    return res
+
+
+def print_dict(value, indent):
+    res = ''
+    for k, v in value.items():
+        if isinstance(v, list):
+            res += f"{' ' * indent}- {k} :\n{print_tab(v, indent + 2)}"
+        elif isinstance(v, dict):
+            res += f"{' ' * indent}- {k} :\n{print_dict(v, indent + 2)}"
+        else:
+            res += f"{' ' * indent}- {k} : {v}\n"
+    return res
 
 
 def fetch_points(pointname):
@@ -150,33 +259,6 @@ def update_points(pointname, operator, num):
     con.close()
     return r['Valeur']
 
-
-def print_attributes(id):
-    con = sqlite3.connect('ac2d20.db')
-    con.row_factory = sqlite3.Row
-    cur = con.cursor()
-    cur.execute("select * from caractéristiques where Personnage = 'asha';")
-    con.commit
-    r = cur.fetchone()
-    con.close()
-    headers = r.keys()
-    headers.pop(0)
-    tab = []
-    for k in headers:
-        tab.append([k, r[k]])
-    return tabulate(tab, [])
-
-
-def print_skills(id):
-    con = sqlite3.connect('ac2d20.db')
-    con.row_factory = sqlite3.Row
-    cur = con.cursor()
-    skills = []
-    for r in cur.execute("select * from compétences where Personnage = 'asha';"):
-        skills.append([r[1], r[2]])
-    con.close()
-    return tabulate(skills, [])
-    
 
 fh = open('config.json', 'r')
 config = json.load(fh)

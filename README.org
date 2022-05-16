@@ -1,0 +1,8 @@
+This is a bot for playing Achtung! Cthulhu 2d20 in Discord. Sadely,
+it’s not a well writen bot for everyone, it’s just a scruffy bot for
+my own party... You can fiddle with it anyway if you liked to. The
+rest is in French, because this readme is for my player, who are
+French speaking humans.
+
+Donc en gros, pour savoir comment ça marche, tapez « !aide » sur le
+serveur discord.

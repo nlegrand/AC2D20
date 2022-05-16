@@ -4,17 +4,17 @@
     "archétype": "Agent infiltré",
     "antécédents": "Agent secret",
     "caractéristique": "Fougue de la jeunesse",
-    "véritées": [
+    "vérités": [
         "Origines indiennes",
         "Tueuse silencieuse",
         "Fougue de la jeunesse"
     ],
     "stress": {
-        "total": 10,
+        "max": 10,
         "fatigue": 1,
         "perdus": 4
     },
-    "languages": "anglais",
+    "languages": ["anglais"],
     "courage": 0,
     "armure": 0,
     "fortune": 0,
@@ -74,7 +74,7 @@
         },
         "tactique": {
             "score": 1,
-            "spéialité": [
+            "spécialité": [
                 "opérations secrètes"
             ]
         },
