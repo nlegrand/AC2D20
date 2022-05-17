@@ -1,0 +1,102 @@
+{
+    "nom": "Renato Moscella",
+    "nationalité": "italienne",
+    "archétype": "Mécano",
+    "antécédents": "Résistant",
+    "caractéristique": "né avec un volant dans les mains",
+    "vérités": [
+        "né avec un volant dans les mains"
+    ],
+    "stress": {
+        "max": 9,
+        "fatigue": 0,
+        "perdus": 0
+    },
+    "languages": [
+        "anglais",
+	"français",
+	"italien"
+    ],
+    "courage": 0,
+    "armure": 0,
+    "fortune": 3,
+    "blessures": {
+        "max": 3,
+        "descriptions": []
+    },
+    "attributs": {
+        "agilité": 8,
+        "vigueur": 7,
+        "coordination": 10,
+        "perspicacité": 7,
+        "reason": 11,
+        "volonté": 8
+    },
+    "compétences": {
+        "savoir académique": {
+            "score": 0
+        },
+        "athlétisme": {
+            "score": 1
+        },
+        "ingénieurie": {
+            "score": 3,
+	    "spécialité": [
+		"explosifs"
+		]
+        },
+        "combat": {
+            "score": 3
+        },
+        "médecine": {
+            "score": 3
+        },
+        "observation": {
+            "score": 0
+        },
+        "persuasion": {
+            "score": 3
+        },
+        "résilience": {
+            "score": 1
+        },
+        "discrétion": {
+            "score": 2,
+            "spécialité": [
+                "discrétion urbaine"
+            ]
+        },
+        "survie": {
+            "score": 0
+        },
+        "tactique": {
+            "score": 1,
+            "spécialité": [
+                "projets techniques"
+            ]
+        },
+        "véhicule": {
+            "score": 3,
+	    "spécialité": [
+		"autos"
+		]
+        }
+    },
+    "talents": {
+        "ça va tenir le coup": {
+            "mots clefs": [
+                "mécano",
+                "ingénieur"
+            ],
+            "effet": "2 élans : ignore les blessures du véhicule"
+        },
+        "un visage dans la foule": {
+            "mots clefs": "discrétion",
+            "effet": "diff +1 pour être repéré dans la foule"
+        },
+        "passeur/contrebandier": {
+            "mots clefs": "véhicule",
+            "effet": "utilise véhicule plutôt que discrétion pour cacher quelque chose dans un véhicule. Peut relancer un dé gratuitement."
+        }
+    }
+}

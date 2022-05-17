@@ -1,0 +1,102 @@
+{
+    "nom": "Jean Tremblay",
+    "nationalité": "Canadienne",
+    "archétype": "Escroc",
+    "antécédents": "Artiste",
+    "caractéristique": "Mentalité criminelle",
+    "vérités": [
+        "mentalité criminelle"
+    ],
+    "stress": {
+        "max": 11,
+        "fatigue": 0,
+        "perdus": 0
+    },
+    "languages": [
+        "anglais",
+	"français"
+    ],
+    "courage": 2,
+    "armure": 0,
+    "fortune": 3,
+    "blessures": {
+        "max": 3,
+        "descriptions": []
+    },
+    "attributs": {
+        "agilité": 10,
+        "vigueur": 6,
+        "coordination": 8,
+        "perspicacité": 10,
+        "reason": 7,
+        "volonté": 10
+    },
+    "compétences": {
+        "savoir académique": {
+            "score": 1
+        },
+        "athlétisme": {
+            "score": 1
+        },
+        "ingénieurie": {
+            "score": 0
+        },
+        "combat": {
+            "score": 0
+        },
+        "médecine": {
+            "score": 4
+        },
+        "observation": {
+            "score": 4,
+	    "spécialité": [
+		"instincts"
+		]
+        },
+        "persuasion": {
+            "score": 4,
+	    "spécialité": [
+		"insinuation",
+		"mensonge"
+	    ]	    
+        },
+        "résilience": {
+            "score": 2
+        },
+        "discrétion": {
+            "score": 3
+        },
+        "survie": {
+            "score": 1,
+	    "spécialité": [
+                "pistage"
+            ]
+        },
+        "tactique": {
+            "score": 1
+        },
+        "véhicule": {
+            "score": 1
+        }
+    },
+    "armes": {
+    },
+    "talents": {
+        "chaméléon": {
+            "mots clefs": [
+                "escroc",
+                "discretion",
+		"fortune"
+            ],
+            "effet": "1 pt de fortune : dispose sur lui ou à proximité de papiers et déguisement pour personnifier un alias"
+        },
+        "signal_subtil": {
+            "mots clefs": "persuasion",
+            "effet": "après un temps de conversiation avec quelqu’un, le 1er dé acheté pour un jet de persuasion est gratuit"
+        },
+        "présence imposante": {
+            "mots clefs": "persuasion",
+            "effet": "persuasion à la place de combat pour la mêlée, l’arme gagne perçante 1 ou étourdissante"
+        }
+    }
+}

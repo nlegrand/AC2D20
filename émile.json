@@ -1,0 +1,112 @@
+{
+    "nom": "Émile Bougle",
+    "nationalité": "française",
+    "archétype": "Soldat",
+    "antécédents": "Armée",
+    "caractéristique": "Cobaye",
+    "vérités": [
+        "tireur d’élite",
+        "cobaye"
+    ],
+    "stress": {
+        "max": 13,
+        "fatigue": 0,
+        "perdus": 0
+    },
+    "languages": [
+        "anglais",
+	"français"
+    ],
+    "courage": 6,
+    "armure": 2,
+    "fortune": 3,
+    "blessures": {
+        "max": 3,
+        "descriptions": []
+    },
+    "attributs": {
+        "agilité": 10,
+        "vigueur": 11,
+        "coordination": 10,
+        "perspicacité": 7,
+        "reason": 6,
+        "volonté": 7
+    },
+    "compétences": {
+        "savoir académique": {
+            "score": 0
+        },
+        "athlétisme": {
+            "score": 3
+        },
+        "ingénieurie": {
+            "score": 0
+        },
+        "combat": {
+            "score": 5,
+            "spécialité": [
+                "corps à corps",
+		"fusils"
+            ]
+        },
+        "médecine": {
+            "score": 0
+        },
+        "observation": {
+            "score": 1
+        },
+        "persuasion": {
+            "score": 0
+        },
+        "résilience": {
+            "score": 2
+        },
+        "discrétion": {
+            "score": 0
+        },
+        "survie": {
+            "score": 3,
+	    "spécialité": [
+		"chasse"
+		]
+        },
+        "tactique": {
+            "score": 3,
+            "spécialité": [
+                "armée"
+            ]
+        },
+        "véhicule": {
+            "score": 0
+        }
+    },
+    "armes": {
+        "Springfield M1903": {
+            "usage": "fusils",
+            "portée": "longue",
+            "dommages": {
+                "dé de défi": 5
+            },
+            "salve": "vicieux",
+            "taille": "majeure",
+            "qualité": "fiable"
+        }
+    },
+    "talents": {
+        "Homme armée": {
+            "mots clefs": [
+                "soldat",
+                "combat"
+            ],
+            "effet": "2 élans : peut ajouter à son arme l’effet drain ou perçant ou étourdissant"
+        },
+        "Tireur d’élite": {
+            "mots clefs": "combat",
+            "effet": "vise : 1er d20 acheté gratuit, perçant ou perçant +1 si déjà perçant"
+        },
+        "Insensible à l’horreur": {
+            "mots clefs": "bizarre",
+            "effet": "+6 en courage, peut relancer un d20 pour éviter une cicatrice mentale, mais les autres vous trouve étrange, portée de complication augmentée de 1 pour les jets de persuasion"
+        }
+    }
+}
