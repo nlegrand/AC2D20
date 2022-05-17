@@ -86,12 +86,12 @@ async def on_message(message):
         num = int(op_on_point.group(3))
         await message.channel.send(update_points(pointname, operator, num))
 
-    show_char = re.match(r"^\s*!perso\s*([a-z]+)\s*$", message.content)
+    show_char = re.match(r"^\s*!perso\s*(asha|jean|émile|renato)\s*$", message.content)
     if (show_char is not None):
         perso = show_char.group(1)
         await message.channel.send(print_character(perso))
 
-    show_char_detail = re.match(r"^\s*!perso\s*([a-z]+)\s*(caracs|santé|armes)\s*$", message.content)
+    show_char_detail = re.match(r"^\s*!perso\s*(asha|jean|émile|renato)\s*(caracs|santé|armes)\s*$", message.content)
     if (show_char_detail is not None):
         perso = show_char_detail.group(1)
         character = AC2D20Character(perso)
@@ -141,7 +141,7 @@ async def on_message(message):
 
         await message.channel.send(f"```{res}```")
 
-    set_stress = re.match(r"^\s*!(stress|fatigue)\s*([a-z]+)\s*(1{0,1}[0-9])\s*$", message.content)
+    set_stress = re.match(r"^\s*!(stress|fatigue)\s*(asha|jean|émile|renato)\s*(1{0,1}[0-9])\s*$", message.content)
     if set_stress is not None:
         stress_type = set_stress.group(1)
         if stress_type == "stress":
@@ -154,7 +154,7 @@ async def on_message(message):
         res += f"Blessures :\n{print_dict(character.stats('blessures'), 2)}"
         await message.channel.send(f"```#Santé de {perso} :\n\n{res}```")
 
-    set_injury = re.match(r"^\s*!blessure\s+([a-z]+)\s+(.{3,512})$", message.content)
+    set_injury = re.match(r"^\s*!blessure\s+(asha|jean|émile|renato)\s+(.{3,512})$", message.content)
     if set_injury is not None:
         perso = set_injury.group(1)
         argstr = set_injury.group(2)
