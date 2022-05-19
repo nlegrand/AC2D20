@@ -28,7 +28,7 @@ class AC2D20Character:
         if value >= 0 and value <= 3:
             self.allstats['fortune'] = value
             self.save()
-            return self.stats['fortune']
+            return self.stats('fortune')
 
     def save(self):
         f = open(f'{self.id}.json', 'w')

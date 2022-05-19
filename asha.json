@@ -19,7 +19,7 @@
     ],
     "courage": 0,
     "armure": 0,
-    "fortune": 0,
+    "fortune": 3,
     "blessures": {
         "max": 3,
         "descriptions": []

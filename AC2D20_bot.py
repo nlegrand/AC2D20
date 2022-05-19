@@ -136,6 +136,7 @@ async def on_message(message):
         res += "  !(stress|fatigue) <perso> [0-9] : positionne le stress ou la fatigue\n"
         res += "  !blessure <perso> <bla bla bla> : ajoute une blessure\n"
         res += "  !blessure <perso> <remove> : retire toutes les blessures\n"
+        res += "  !fortune <perso> [0-3] : positionne les points de fortune\n"
         res += "  <perso> peut être une de ces quatre valeurs : "
         res += "asha, émile, jean, renato\n"
 
@@ -163,6 +164,14 @@ async def on_message(message):
         res = f"Stress :\n{print_dict(character.stats('stress'), 2)}"
         res += f"Blessures :\n{print_dict(character.stats('blessures'), 2)}"
         await message.channel.send(f"```#Santé de {perso} :\n\n{res}```")
+
+    set_fortune = re.match(r"^\s*!fortune\s+(asha|jean|émile|renato)\s+([1-3])\s*$", message.content)
+    if set_fortune is not None:
+        perso = set_fortune.group(1)
+        argstr = set_fortune.group(2)
+        character = AC2D20Character(perso)
+        res = character.fortune(int(argstr))
+        await message.channel.send(f"```#Fortune de {perso} : {res}```")
 
 
 
