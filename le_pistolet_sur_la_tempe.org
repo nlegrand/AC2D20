@@ -13,15 +13,13 @@ section. Après de nombreux tests et lui avoir expliquer ce dont il
 était question, Towton demanda à Émile s’il voulait rejoindre la
 section. Émile resta un instant silencieux avant de répondre :
 
-#+BEGIN_VERSE
-« Je pourrais avoir un Springfield M1903 ?
-— Qu’est-ce que c’est ?
-— Un fusil américain.
-— Ho oui, on va vous trouver ça.
-— Avec une lunette de visée ?
-— Oui, bien sûr.
-— Alors je veux bien. »
-#+END_VERSE
+« Je pourrais avoir un Springfield M1903 ?\\
+— Qu’est-ce que c’est ?\\
+— Un fusil américain.\\
+— Ho oui, on va vous trouver ça.\\
+— Avec une lunette de visée ?\\
+— Oui, bien sûr.\\
+— Alors je veux bien. »\\
 
 Une fois partie, l’affable lieutenant Archibald Strang dit aux membres
 de la section présente : « un étranger inexpressif et
