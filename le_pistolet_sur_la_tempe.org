@@ -1,5 +1,7 @@
 #+title: Le pistolet sur la tempe
 
+* Introduction
+
 Début juin 1940, c’est la débâcle en France, les Allemands ont atteint
 la Manche depuis le mois de mai et menacent le Royaume-Uni. Émile prit
 part à la résistance héroïque française pendant la bataille de
@@ -67,3 +69,24 @@ Victoria Station grouille de monde. Vous arrivez à Douvre un peu avant
 une heure de l’après-midi. En descendant du quai vous voyez un
 militaire tenir un panneau avec votre nom de marqué dessus et le nom
 de trois autres personnes que vous ne connaissez pas.
+
+Renato demande s'il peut conduire, mais le sergent refuse. Jean essaye
+de lui tirer quelques informations, mais le sergent préfère attendre
+pour répondre aux questions. Les héros montent dans le camion qui part
+tout de suite. Ce dernier quitte Douvre et suit la côte, avant de
+repartir dans les terres. Au bout de quinze minutes il arrive sur une
+longue allée arborée et s'arrête devant une imposante demeure.
+
+** Scène 2 : Bulney Grange
+
+Vous voyez une majestueuse habitation transformée en hôpital
+militaire. Plusieurs ambulance sont garées à l'extérieur. Vous voyez
+des patients se promener ou se détendre sur des chaises longues. le
+sergent Briggs vous amène à une bibliothèque bien garnie où vous
+attendent du thé et des sandwichs. Briggs vous invite à vous servir et
+vous asseoir.
+
+« Veuillez nous pardonner d'avoir demandé de l'assistance en urgence,
+mais nous sommes complètement décontenancés et perdus. Quelles sont
+les informations que le bureau de la guerre vous à donné avant de
+venir ? »
