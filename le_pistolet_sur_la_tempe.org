@@ -151,4 +151,42 @@ capitaine Featherstone, et les cannoniers Brown, Day, Larkin et
 Roberts.
 
 Le plus affecté semble être le docteur Bland. Ses mains tremblent, il
-a le regard dans le vide et marmonne des choses incompréhensibles.
+a le regard dans le vide et marmonne des choses
+incompréhensibles. Régulièrement, il se frotte le visage avec ses
+mains.
+
+[[file:le_pistolet_sur_la_tempe/dr_bland.png]]
+
+Jean est très perplexe, parce que son bagou naturel n’arrive pas à
+tirer certains patients de leur mutisme alors qu’il leur demande ce
+qu’ils font comme cauchemar.
+
+Émile demande à Bland ce qu’il a trouvé dans la craie, mais ce dernir
+continue de marmonner en se frottant le visage. Le médecin et
+l’infirmier semblent très mal à l’aise en la présence d’Émile.
+
+Renato va s'adresser aux cannoniers. Il commence par leur poser
+quelques questions simples sur leur enrôlement dans l'armée et tente
+quelques blagues sur la hiérarchie. « J'ai entendu dire par le bon
+docteur que vous avez refusé de manger de poisson frais. Pourtant, il
+va vous falloir des forces si on veut se débarasser des allemands !
+Qu'est ce qui vous as gêné? »
+
+Après avoir rigolé aux blagues de Renato ils se rembrunissent.
+
+« le poisson c’est pas possible »
+
+« ça me dégoûte »
+
+« leurs yeux globuleux me rappellent trop ceux des dégénérés de
+Saint-Andrews. Moi je suis de Whitfield, on sait que les gens de
+Saint-Andrews ne sont pas normaux, avec leur face plate et leurs yeux
+globuleux… TOUT EST DE LEUR FAUTE ! » Il s’agite tellement qu’un
+infirmier le ceinture pendant que le docteur lui administre un
+calmant.
+
+Asha demande au docteur si elle peut avoir accès à d’éventuelles notes
+du docteur Bland. On l’emmène à l’écart pour lui montrer un petit
+carnet où elle note un passage intéressant :
+
+[[file:le_pistolet_sur_la_tempe/notes_de_bland.png]]
