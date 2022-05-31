@@ -155,7 +155,7 @@ a le regard dans le vide et marmonne des choses
 incompréhensibles. Régulièrement, il se frotte le visage avec ses
 mains.
 
-[[file:le_pistolet_sur_la_tempe/dr_bland.png]]
+[[file:le_pistolet_sur_la_tempe/dr_bland.png][Dessin du Dr Bland]]
 
 Jean est très perplexe, parce que son bagou naturel n’arrive pas à
 tirer certains patients de leur mutisme alors qu’il leur demande ce
@@ -189,4 +189,17 @@ Asha demande au docteur si elle peut avoir accès à d’éventuelles notes
 du docteur Bland. On l’emmène à l’écart pour lui montrer un petit
 carnet où elle note un passage intéressant :
 
-[[file:le_pistolet_sur_la_tempe/notes_de_bland.png]]
+[[file:le_pistolet_sur_la_tempe/notes_de_bland.png][Les notes de Bland]]
+
+Renato rassure les cannoniers restants en leur affirmant qu'il va
+négocier avec le medecin chef pour qu'ils n'aient plus de poisson. Il
+se dirige ensuite vers le capitaine, lui fait un salut militaire et
+s'installe près de lui. Après avoir observé quelques minutes de
+silence, il lui demande: « Capitaine, quelle est votre analyse de la
+situation? Que pensez-vous qu'il arrive a vous et vos hommes? »
+
+« Je ne sais pas. Après une journée à creuser avec les hommes j’ai eu
+un mal de crâne épouvantable et des nausées. Je n’ai pas bien dormi
+depuis. Heureusement, la morphine aide à tenir le coup. Je m’en veux
+tellement d’être incapable de quoi que ce soit à cause de ces maux de
+tête et de ces cauchemars... »
