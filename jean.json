@@ -45,7 +45,7 @@
             "score": 0
         },
         "médecine": {
-            "score": 4
+            "score": 0
         },
         "observation": {
             "score": 4,
@@ -61,7 +61,7 @@
 	    ]	    
         },
         "résilience": {
-            "score": 2
+            "score": 1
         },
         "discrétion": {
             "score": 3
@@ -92,7 +92,7 @@
         },
         "signal_subtil": {
             "mots clefs": "persuasion",
-            "effet": "après un temps de conversiation avec quelqu’un, le 1er dé acheté pour un jet de persuasion est gratuit"
+            "effet": "après un temps de conversation avec quelqu’un, le 1er dé acheté pour un jet de persuasion est gratuit"
         },
         "présence imposante": {
             "mots clefs": "persuasion",

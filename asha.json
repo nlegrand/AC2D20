@@ -12,7 +12,7 @@
     "stress": {
         "max": 10,
         "fatigue": 0,
-        "perdus": 0
+        "perdus": 2
     },
     "languages": [
         "anglais"

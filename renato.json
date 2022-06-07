@@ -10,12 +10,12 @@
     "stress": {
         "max": 9,
         "fatigue": 0,
-        "perdus": 0
+        "perdus": 3
     },
     "languages": [
         "anglais",
-	"français",
-	"italien"
+        "français",
+        "italien"
     ],
     "courage": 0,
     "armure": 0,
@@ -41,9 +41,9 @@
         },
         "ingénieurie": {
             "score": 3,
-	    "spécialité": [
-		"explosifs"
-		]
+            "spécialité": [
+                "explosifs"
+            ]
         },
         "combat": {
             "score": 3
@@ -77,9 +77,9 @@
         },
         "véhicule": {
             "score": 3,
-	    "spécialité": [
-		"autos"
-		]
+            "spécialité": [
+                "autos"
+            ]
         }
     },
     "talents": {
